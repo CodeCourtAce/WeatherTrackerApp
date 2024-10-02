@@ -1,26 +1,38 @@
 [
 	{
-		"name": "miami",
-		"id": "city-1727490981473-638"
-	},
-	{
 		"name": "san diego",
 		"id": "city-1727491865536-472"
 	},
 	{
-		"name": "miami",
-		"id": "city-1727534541276-268"
-	},
-	{
-		"name": "miami",
-		"id": "city-1727536011775-0"
-	},
-	{
-		"name": "miami",
-		"id": "city-1727538635948-106"
-	},
-	{
 		"name": "San Francisco",
 		"id": "city-1727714782829-417"
+	},
+	{
+		"name": "san diego",
+		"id": "city-1727752478535-919"
+	},
+	{
+		"name": "miami",
+		"id": "city-1727801603838-675"
+	},
+	{
+		"name": "miami",
+		"id": "city-1727806074024-25"
+	},
+	{
+		"name": "miami",
+		"id": "city-1727806242047-348"
+	},
+	{
+		"name": "new york",
+		"id": "city-1727808161374-497"
+	},
+	{
+		"name": "new york",
+		"id": "city-1727809829933-805"
+	},
+	{
+		"name": "miami",
+		"id": "city-1727809830995-561"
 	}
 ]

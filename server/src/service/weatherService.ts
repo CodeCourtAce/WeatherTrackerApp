@@ -47,12 +47,12 @@ class WeatherService {
 
   private async fetchLocationData() {
     const response = await fetch(this.buildGeocodeQuery());
-    console.log(response,"Line 50");
+    //console.log(response,"Line 50");
     if (!response.ok) {
       throw new Error("Failed to fetch location data");
     }
     const locationData = await response.json();
-    console.log(locationData, "Line 55");
+    //console.log(locationData, "Line 55");
     return locationData;
   }
 
@@ -121,14 +121,18 @@ class WeatherService {
       if (!response.ok) {
         throw new Error("Failed to fetch weather data");
       }
+      
       const weatherData = await response.json();
+      //console.log('weatherData',weatherData)
+      //console.log('forcastarray',weatherData[1])
       return weatherData;
-      /*console.log(weatherData, "Line 125")
+
+      
   
-      const temperature = weatherData.list[0].main.temp;
-      console.log(temperature, "Line 127")
-      const { cityName, date, icon, description, temp, humidity, wind } = weatherData; // Assuming this structure
-      new Weather(cityName, date, icon, description, temp, humidity, wind);*/
+      // const temperature = weatherData.list[0].main.temp;
+     
+      // const { cityName, date, icon, description, temp, humidity, wind } = weatherData; // Assuming this structure
+      // new Weather(cityName, date, icon, description, temp, humidity, wind);
     } catch (error) {
       console.error('Error fetching weather data:', error);
       return undefined;
@@ -177,10 +181,11 @@ class WeatherService {
   private async buildForecastArray() {
     const forecastArray = [];
     const data = await this.fetchWeatherData();
-
+    //console.log('buildForecastArray data', data)
     // Assuming weatherData contains daily forecasts
     for (let i = 0; i < data.list.length+1; i += 7) {
       const weather = await this.parseWeatherData(i);
+      console.log(weather, "Line 188")
       if (weather) {
         // Create a forecast object
         const forecast = {
